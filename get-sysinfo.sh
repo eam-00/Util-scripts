@@ -44,7 +44,6 @@ $MY_ECHO >> $LOG
 $MY_ECHO "Kernel Version:" >> $LOG
 $MY_UNAME -a >> $LOG
 $SEPARATOR >> $LOG
-$MY_ECHO >> $LOG
 
 $MY_ECHO >> $LOG
 
