@@ -23,7 +23,6 @@ $MY_CAT /etc/lsb-release >> $LOG
 $SEPARATOR >> $LOG
 fi
 
-
 $MY_ECHO >> $LOG
 
 if [ -f "/etc/os-release" ]; then
@@ -55,9 +54,13 @@ $MY_CAT /proc/cpuinfo >> $LOG
 $SEPARATOR >> $LOG
 fi
 
+$MY_ECHO >> $LOG
+
 $MY_ECHO "RAM Info:" >> $LOG
 $MY_FREE -m >> $LOG
 $SEPARATOR >> $LOG
+
+$MY_ECHO >> $LOG
 
 $MY_ECHO "HDD Space Info:" >> $LOG
 $MY_DF -h >> $LOG
