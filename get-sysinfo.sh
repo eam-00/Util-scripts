@@ -20,8 +20,9 @@ $MY_ECHO >> $LOG
 if [ -f "/etc/lsb-release" ]; then
 $MY_ECHO "LSB Release:" >> $LOG
 $MY_CAT /etc/lsb-release >> $LOG
-fi
 $SEPARATOR >> $LOG
+fi
+
 
 $MY_ECHO >> $LOG
 
