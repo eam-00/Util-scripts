@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 HOSTNAME=`which hostname`
-MY_ECHO='/usr/bin/echo -e'
-SEPARATOR='/usr/bin/echo "----------------------" '
+MY_ECHO="`which echo` -e"
+## MY_ECHO='/usr/bin/echo -e'
+## SEPARATOR='/usr/bin/echo "----------------------" '
+SEPARATOR="`which echo` ----------------------"
 MY_CAT=`which cat`
 MY_UNAME=`which uname`
 MY_FREE=`which free`
@@ -52,7 +54,6 @@ $MY_ECHO "CPU Info:" >> $LOG
 $MY_CAT /proc/cpuinfo >> $LOG
 $MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
-
 fi
 
 $MY_ECHO >> $LOG
