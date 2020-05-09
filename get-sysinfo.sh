@@ -51,6 +51,7 @@ if [ -f "/proc/cpuinfo" ]; then
 $MY_ECHO "CPU Info:" >> $LOG
 $MY_CAT /proc/cpuinfo >> $LOG
 $SEPARATOR >> $LOG
+$MY_ECHO >> $LOG
 fi
 
 $MY_ECHO >> $LOG
@@ -58,6 +59,7 @@ $MY_ECHO >> $LOG
 $MY_ECHO "RAM Info:" >> $LOG
 $MY_FREE -m >> $LOG
 $SEPARATOR >> $LOG
+$MY_ECHO >> $LOG
 
 $MY_ECHO >> $LOG
 
