@@ -2,8 +2,6 @@
 
 HOSTNAME=`which hostname`
 MY_ECHO="`which echo` -e"
-## MY_ECHO='/usr/bin/echo -e'
-## SEPARATOR='/usr/bin/echo "----------------------" '
 SEPARATOR="`which echo` ----------------------"
 MY_CAT=`which cat`
 MY_UNAME=`which uname`
