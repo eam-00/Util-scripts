@@ -8,6 +8,7 @@ MY_UNAME=`which uname`
 MY_FREE=`which free`
 MY_DF=`which df`
 MY_IFCONFIG=`which ifconfig`
+MY_IP=`which ip`
 LOG='/tmp/sysinfo.log'
 
 
@@ -74,7 +75,12 @@ $MY_IFCONFIG >> $LOG
 $SEPARATOR >> $LOG
 fi
 
-# ip a >> /tmp/server-info.txt
+if [ -f "/usr/bin/ip" ]; then
+$MY_ECHO "ip Info:" >> $LOG
+$MY_IP a >> $LOG
+$SEPARATOR >> $LOG
+fi
+
 # cat /etc/network/interfaces >> /tmp/server-info.txt
 # netstat -nr >> /tmp/server-info.txt
 # Snips from /etc/rsnapshot.conf
