@@ -3,6 +3,7 @@
 ## Send an email upon server reboot
 ## This script has to be invoked thur a cronjob whern the server reboots
 
+## Multiple destinataries has to be separated by a space
 DEST='xxxxxxx@xxxxxxx.net xxxxx@xxxx.com '
 HOSTNAME=`/bin/hostname`
 MAIL=`which mail`
