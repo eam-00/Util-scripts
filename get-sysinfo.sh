@@ -29,6 +29,7 @@ $MY_ECHO >> $LOG
 if [ -f "/etc/os-release" ]; then
 $MY_ECHO "OS Release:" >> $LOG
 $MY_CAT /etc/os-release >> $LOG
+$MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 fi
 
@@ -37,6 +38,7 @@ $MY_ECHO >> $LOG
 if [ -f "/etc/debian_version" ]; then
 $MY_ECHO "Debian Version:" >> $LOG
 $MY_CAT /etc/debian_version >> $LOG
+$MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 fi
 
@@ -67,6 +69,7 @@ $MY_ECHO >> $LOG
 
 $MY_ECHO "HDD Space Info:" >> $LOG
 $MY_DF -h >> $LOG
+$MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 
 if [ -f "/sbin/ifconfig" ]; then
