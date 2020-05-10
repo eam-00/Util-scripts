@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+## Send an email upon server reboot
+## This script has to be invoked thur a cronjob whern the server reboots
+
 DEST='xxxxxxx@xxxxxxx.net xxxxx@xxxx.com '
 HOSTNAME=`/bin/hostname`
 MAIL=`which mail`
