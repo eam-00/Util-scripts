@@ -2,6 +2,7 @@
 
 ## Send an email upon server reboot
 ## This script has to be invoked thur a cronjob whern the server reboots
+## @reboot /bin/sh /path/to/reboot-email.sh 1>/tmp/_debug.reboot-email.1.log 2>/tmp/_debug.reboot-email.2.log
 
 ## Multiple destinataries has to be separated by a space
 DEST='xxxxxxx@xxxxxxx.net xxxxx@xxxx.com '
