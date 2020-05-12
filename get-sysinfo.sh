@@ -9,6 +9,7 @@ MY_FREE=`which free`
 MY_DF=`which df`
 MY_IFCONFIG=`which ifconfig`
 MY_IP=`which ip`
+MY_NETSTAT=`which netstat`
 LOG='/tmp/sysinfo.log'
 
 
@@ -90,7 +91,13 @@ $MY_CAT /etc/network/interfaces >> $LOG
 $SEPARATOR >> $LOG
 fi
 
-# cat /etc/network/interfaces >> /tmp/server-info.txt
+if [ -f "/bin/netstat" ]; then
+$MY_ECHO "Netstat Info:" >> $LOG
+$MY_NETSTAT >> $LOG
+$SEPARATOR >> $LOG
+fi
+
+
 # netstat -nr >> /tmp/server-info.txt
 # Snips from /etc/rsnapshot.conf
 # cat /usr/local/etc/scripts/backups/tar-backups.sh >> /tmp/server-info.txt
