@@ -84,6 +84,12 @@ $MY_IP a >> $LOG
 $SEPARATOR >> $LOG
 fi
 
+if [ -f "/etc/network/interfaces" ]; then
+$MY_ECHO "Network Interfaces Info:" >> $LOG
+$MY_CAT /etc/network/interfaces >> $LOG
+$SEPARATOR >> $LOG
+fi
+
 # cat /etc/network/interfaces >> /tmp/server-info.txt
 # netstat -nr >> /tmp/server-info.txt
 # Snips from /etc/rsnapshot.conf
