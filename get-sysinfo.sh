@@ -7,7 +7,8 @@ MY_CAT=`which cat`
 MY_UNAME=`which uname`
 MY_FREE=`which free`
 MY_DF=`which df`
-MY_IFCONFIG=`which ifconfig`
+## MY_IFCONFIG=`which ifconfig`
+MY_IFCONFIG='/sbin/ifconfig'
 MY_IP='/usr/bin/ip'
 MY_NETSTAT='/bin/netstat'
 LOG='/tmp/sysinfo.log'
@@ -73,10 +74,17 @@ $MY_DF -h >> $LOG
 $MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 
-if [ -f "/sbin/ifconfig" ]; then
-$MY_ECHO "ifconfig Info:" >> $LOG
-$MY_IFCONFIG >> $LOG
-$SEPARATOR >> $LOG
+# if [ -f "/sbin/ifconfig" ]; then
+# $MY_ECHO "ifconfig Info:" >> $LOG
+# $MY_IFCONFIG >> $LOG
+# $SEPARATOR >> $LOG
+# fi
+
+if command -v $MY_IFCONFIG > /dev/null 2>&1; then
+  $MY_ECHO "$MY_IFCONFIG Info:" >> $LOG
+  $MY_IFCONFIG >> $LOG
+else
+  $MY_ECHO "$MY_IFCONFIG is not available" >> $LOG
 fi
 
 if command -v $MY_IP > /dev/null 2>&1; then
