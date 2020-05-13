@@ -7,7 +7,6 @@ MY_CAT=`which cat`
 MY_UNAME=`which uname`
 MY_FREE=`which free`
 MY_DF=`which df`
-## MY_IFCONFIG=`which ifconfig`
 MY_IFCONFIG='/sbin/ifconfig'
 MY_IP='/usr/bin/ip'
 MY_NETSTAT='/bin/netstat'
@@ -125,7 +124,6 @@ fi
 
 $SEPARATOR >> $LOG
 
-# netstat -nr >> /tmp/server-info.txt
 # Snips from /etc/rsnapshot.conf
 # cat /usr/local/etc/scripts/backups/tar-backups.sh >> /tmp/server-info.txt
 
