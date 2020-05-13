@@ -74,18 +74,14 @@ $MY_DF -h >> $LOG
 $MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 
-# if [ -f "/sbin/ifconfig" ]; then
-# $MY_ECHO "ifconfig Info:" >> $LOG
-# $MY_IFCONFIG >> $LOG
-# $SEPARATOR >> $LOG
-# fi
-
 if command -v $MY_IFCONFIG > /dev/null 2>&1; then
   $MY_ECHO "$MY_IFCONFIG Info:" >> $LOG
   $MY_IFCONFIG >> $LOG
 else
   $MY_ECHO "$MY_IFCONFIG is not available" >> $LOG
 fi
+
+$SEPARATOR >> $LOG
 
 if command -v $MY_IP > /dev/null 2>&1; then
  $MY_ECHO "$MY_IP Info:" >> $LOG
