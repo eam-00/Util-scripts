@@ -21,8 +21,9 @@ $SEPARATOR >> $LOG
 $MY_ECHO >> $LOG
 
 if [ -f "/etc/lsb-release" ]; then
-$MY_ECHO "LSB Release:" >> $LOG
+ $MY_ECHO "LSB Release:" >> $LOG
 $MY_CAT /etc/lsb-release >> $LOG
+$MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 fi
 
@@ -75,37 +76,51 @@ $MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 
 if command -v $MY_IFCONFIG > /dev/null 2>&1; then
+  $MY_ECHO >> $LOG
   $MY_ECHO "$MY_IFCONFIG Info:" >> $LOG
   $MY_IFCONFIG >> $LOG
 else
+  $MY_ECHO >> $LOG
   $MY_ECHO "$MY_IFCONFIG is not available" >> $LOG
+  $MY_ECHO >> $LOG
 fi
 
 $SEPARATOR >> $LOG
 
 if command -v $MY_IP > /dev/null 2>&1; then
+ $MY_ECHO >> $LOG
  $MY_ECHO "$MY_IP Info:" >> $LOG
  $MY_IP a >> $LOG
  $SEPARATOR >> $LOG
+ $MY_ECHO >> $LOG
  $MY_ECHO "$MY_IP Routing Info:" >> $LOG
  $MY_IP route >> $LOG
+ $MY_ECHO >> $LOG
 else
+ $MY_ECHO >> $LOG
  $MY_ECHO "$MY_IP is not available" >> $LOG
+ $MY_ECHO >> $LOG
 fi
 
 $SEPARATOR >> $LOG
 
 if [ -f "/etc/network/interfaces" ]; then
-$MY_ECHO "Network Interfaces Info:" >> $LOG
-$MY_CAT /etc/network/interfaces >> $LOG
-$SEPARATOR >> $LOG
+ $MY_ECHO >> $LOG
+ $MY_ECHO "Network Interfaces Info:" >> $LOG
+ $MY_CAT /etc/network/interfaces >> $LOG
+ $MY_ECHO >> $LOG
+ $SEPARATOR >> $LOG
 fi
 
 if command -v $MY_NETSTAT > /dev/null 2>&1; then
+  $MY_ECHO >> $LOG
   $MY_ECHO "$MY_NETSTAT Routing Info:" >> $LOG
   $MY_NETSTAT -nr >> $LOG
+  $MY_ECHO >> $LOG
 else
+  $MY_ECHO >> $LOG
   $MY_ECHO "$MY_NETSTAT is not available" >> $LOG
+  $MY_ECHO >> $LOG
 fi
 
 $SEPARATOR >> $LOG
