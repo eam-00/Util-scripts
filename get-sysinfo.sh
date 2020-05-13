@@ -8,8 +8,8 @@ MY_UNAME=`which uname`
 MY_FREE=`which free`
 MY_DF=`which df`
 MY_IFCONFIG=`which ifconfig`
-MY_IP=`which ip`
-MY_NETSTAT=`which netstat`
+MY_IP='/usr/bin/ip'
+MY_NETSTAT='/bin/netstat'
 LOG='/tmp/sysinfo.log'
 
 
@@ -79,11 +79,24 @@ $MY_IFCONFIG >> $LOG
 $SEPARATOR >> $LOG
 fi
 
-if [ -f "/usr/bin/ip" ]; then
-$MY_ECHO "ip Info:" >> $LOG
-$MY_IP a >> $LOG
-$SEPARATOR >> $LOG
+## if [ -f "/usr/bin/ip" ]; then
+# if [ -f $MY_IP ]; then
+# $MY_ECHO "ip Info:" >> $LOG
+# $MY_IP a >> $LOG
+# $SEPARATOR >> $LOG
+# fi
+
+if command -v $MY_IP > /dev/null 2>&1; then
+ $MY_ECHO "$MY_IP Info:" >> $LOG
+ $MY_IP a >> $LOG
+ $SEPARATOR >> $LOG
+ $MY_ECHO "$MY_IP Routing Info:" >> $LOG
+ $MY_IP route >> $LOG
+else
+ $MY_ECHO "$MY_IP is not available" >> $LOG
 fi
+
+$SEPARATOR >> $LOG
 
 if [ -f "/etc/network/interfaces" ]; then
 $MY_ECHO "Network Interfaces Info:" >> $LOG
@@ -91,12 +104,13 @@ $MY_CAT /etc/network/interfaces >> $LOG
 $SEPARATOR >> $LOG
 fi
 
-if [ -f "/bin/netstat" ]; then
-$MY_ECHO "Netstat Info:" >> $LOG
-$MY_NETSTAT >> $LOG
-$SEPARATOR >> $LOG
+if command -v $MY_NETSTAT > /dev/null 2>&1; then
+  $MY_ECHO "$MY_NETSTAT Info:" >> $LOG
+else
+  $MY_ECHO "$MY_NETSTAT is not available" >> $LOG
 fi
 
+$SEPARATOR >> $LOG
 
 # netstat -nr >> /tmp/server-info.txt
 # Snips from /etc/rsnapshot.conf
