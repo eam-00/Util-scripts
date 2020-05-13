@@ -105,7 +105,8 @@ $SEPARATOR >> $LOG
 fi
 
 if command -v $MY_NETSTAT > /dev/null 2>&1; then
-  $MY_ECHO "$MY_NETSTAT Info:" >> $LOG
+  $MY_ECHO "$MY_NETSTAT Routing Info:" >> $LOG
+  $MY_NETSTAT -nr >> $LOG
 else
   $MY_ECHO "$MY_NETSTAT is not available" >> $LOG
 fi
