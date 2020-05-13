@@ -22,27 +22,27 @@ $MY_ECHO >> $LOG
 
 if [ -f "/etc/lsb-release" ]; then
  $MY_ECHO "LSB Release:" >> $LOG
-$MY_CAT /etc/lsb-release >> $LOG
-$MY_ECHO >> $LOG
-$SEPARATOR >> $LOG
+ $MY_CAT /etc/lsb-release >> $LOG
+ $MY_ECHO >> $LOG
+ $SEPARATOR >> $LOG
 fi
 
 $MY_ECHO >> $LOG
 
 if [ -f "/etc/os-release" ]; then
-$MY_ECHO "OS Release:" >> $LOG
-$MY_CAT /etc/os-release >> $LOG
-$MY_ECHO >> $LOG
-$SEPARATOR >> $LOG
+ $MY_ECHO "OS Release:" >> $LOG
+ $MY_CAT /etc/os-release >> $LOG
+ $MY_ECHO >> $LOG
+ $SEPARATOR >> $LOG
 fi
 
 $MY_ECHO >> $LOG
 
 if [ -f "/etc/debian_version" ]; then
-$MY_ECHO "Debian Version:" >> $LOG
-$MY_CAT /etc/debian_version >> $LOG
-$MY_ECHO >> $LOG
-$SEPARATOR >> $LOG
+ $MY_ECHO "Debian Version:" >> $LOG
+ $MY_CAT /etc/debian_version >> $LOG
+ $MY_ECHO >> $LOG
+ $SEPARATOR >> $LOG
 fi
 
 $MY_ECHO >> $LOG
@@ -55,10 +55,10 @@ $SEPARATOR >> $LOG
 $MY_ECHO >> $LOG
 
 if [ -f "/proc/cpuinfo" ]; then
-$MY_ECHO "CPU Info:" >> $LOG
-$MY_CAT /proc/cpuinfo >> $LOG
-$MY_ECHO >> $LOG
-$SEPARATOR >> $LOG
+ $MY_ECHO "CPU Info:" >> $LOG
+ $MY_CAT /proc/cpuinfo >> $LOG
+ $MY_ECHO >> $LOG
+ $SEPARATOR >> $LOG
 fi
 
 $MY_ECHO >> $LOG
@@ -76,13 +76,13 @@ $MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 
 if command -v $MY_IFCONFIG > /dev/null 2>&1; then
-  $MY_ECHO >> $LOG
-  $MY_ECHO "$MY_IFCONFIG Info:" >> $LOG
-  $MY_IFCONFIG >> $LOG
+ $MY_ECHO >> $LOG
+ $MY_ECHO "$MY_IFCONFIG Info:" >> $LOG
+ $MY_IFCONFIG >> $LOG
 else
-  $MY_ECHO >> $LOG
-  $MY_ECHO "$MY_IFCONFIG is not available" >> $LOG
-  $MY_ECHO >> $LOG
+ $MY_ECHO >> $LOG
+ $MY_ECHO "$MY_IFCONFIG is not available" >> $LOG
+ $MY_ECHO >> $LOG
 fi
 
 $SEPARATOR >> $LOG
@@ -113,14 +113,14 @@ if [ -f "/etc/network/interfaces" ]; then
 fi
 
 if command -v $MY_NETSTAT > /dev/null 2>&1; then
-  $MY_ECHO >> $LOG
-  $MY_ECHO "$MY_NETSTAT Routing Info:" >> $LOG
-  $MY_NETSTAT -nr >> $LOG
-  $MY_ECHO >> $LOG
+ $MY_ECHO >> $LOG
+ $MY_ECHO "$MY_NETSTAT Routing Info:" >> $LOG
+ $MY_NETSTAT -nr >> $LOG
+ $MY_ECHO >> $LOG
 else
-  $MY_ECHO >> $LOG
-  $MY_ECHO "$MY_NETSTAT is not available" >> $LOG
-  $MY_ECHO >> $LOG
+ $MY_ECHO >> $LOG
+ $MY_ECHO "$MY_NETSTAT is not available" >> $LOG
+ $MY_ECHO >> $LOG
 fi
 
 $SEPARATOR >> $LOG
