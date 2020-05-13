@@ -79,13 +79,6 @@ $MY_IFCONFIG >> $LOG
 $SEPARATOR >> $LOG
 fi
 
-## if [ -f "/usr/bin/ip" ]; then
-# if [ -f $MY_IP ]; then
-# $MY_ECHO "ip Info:" >> $LOG
-# $MY_IP a >> $LOG
-# $SEPARATOR >> $LOG
-# fi
-
 if command -v $MY_IP > /dev/null 2>&1; then
  $MY_ECHO "$MY_IP Info:" >> $LOG
  $MY_IP a >> $LOG
