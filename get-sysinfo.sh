@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+## get-sysinfo.sh
+## Gather information on Linux box (Debian/ Ubuntu centric)
+## and save that info onto a log file
+
 HOSTNAME=`which hostname`
 MY_ECHO="`which echo` -e"
 SEPARATOR="`which echo` ----------------------"
