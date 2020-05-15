@@ -2,13 +2,13 @@
 
 ## 
 
-REGULAT_USER=''
+REGULAR_USER=''
 
 apt-get install logwatch zile monit mailutils rsnapshot
 
 mkdir -p /var/cache/logwatch
 mkdir -p /root/Zile/Backups/
-mkdir -p /home/$REGULAT_USER/Zile/Backups/
+mkdir -p /home/$REGULAR_USER/Zile/Backups/
 
 cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
 
@@ -18,13 +18,13 @@ cp /etc/ssh/sshd_config /etc/ssh/sshd_config.ORIG
 cd /tmp/
 
 cp .zile /root/
-cp .zile $REGULAT_USER/
+cp .zile $REGULAR_USER/
 
 cp logrotate.conf /etc/logrotate.conf
 cp sshd_config /etc/ssh/sshd_config
 cp logwatch.conf /etc/logwatch/conf/logwatch.conf
 
-chown -R $REGULAT_USER:$REGULAT_USER /home/$REGULAT_USER/Zile/Backups/
-chmod 0700 /home/$USER
+chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/Zile/Backups/
+chmod 0700 /home/$REGULAR_USER
 
 ## EoF ##
