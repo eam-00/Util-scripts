@@ -24,4 +24,7 @@ cp logrotate.conf /etc/logrotate.conf
 cp sshd_config /etc/ssh/sshd_config
 cp logwatch.conf /etc/logwatch/conf/logwatch.conf
 
+chown -R $REGULAT_USER:$REGULAT_USER /home/$REGULAT_USER/Zile/Backups/
+chmod 0700 /home/$USER
+
 ## EoF ##
