@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-rsync {}
+## 
+
+apt-get install logwatch 
+
+rsync {} remote-server:/tmp/
 
 mkdir -p /var/cache/logwatch
 cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
