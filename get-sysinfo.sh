@@ -115,6 +115,14 @@ if [ -f "/etc/network/interfaces" ]; then
  $SEPARATOR >> $LOG
 fi
 
+if [ -f "/etc/netplan/rackspace-cloud.yaml" ]; then
+ $MY_ECHO >> $LOG
+ $MY_ECHO "Netplan Info:" >> $LOG
+ $MY_CAT /etc/netplan/rackspace-cloud.yaml >> $LOG
+ $MY_ECHO >> $LOG
+ $SEPARATOR >> $LOG
+fi
+
 if command -v $MY_NETSTAT > /dev/null 2>&1; then
  $MY_ECHO >> $LOG
  $MY_ECHO "$MY_NETSTAT Routing Info:" >> $LOG
