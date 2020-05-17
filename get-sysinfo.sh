@@ -115,6 +115,7 @@ if [ -f "/etc/network/interfaces" ]; then
  $SEPARATOR >> $LOG
 fi
 
+## Obviously this is wayyy Rackspace centric
 if [ -f "/etc/netplan/rackspace-cloud.yaml" ]; then
  $MY_ECHO >> $LOG
  $MY_ECHO "Netplan Info:" >> $LOG
