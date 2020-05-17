@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+## check-updates.sh
+## Checks for updates on a Debian based Linux server
+## and sends an email
+
 DATE='/bin/date'
 LOG='/tmp/check-updates.log'
 APT_GET='/usr/bin/apt-get'
