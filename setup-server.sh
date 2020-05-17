@@ -6,7 +6,7 @@ REGULAR_USER=''
 
 apt-get install logwatch zile monit mailutils rsnapshot
 
-chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/Zile/Backups/
+chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/
 chmod 0700 /home/$REGULAR_USER
 
 
