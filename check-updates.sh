@@ -19,11 +19,4 @@ $APT_GET $APT_GET_OPT_1 >> $LOG
 $APT_GET $APT_GET_OPT_2 >> $LOG
 $CAT $LOG | $MAIL $DEST -s "Updates for $HOST" 
 
-#/bin/date > /tmp/check-updates.log
-#/usr/bin/apt-get update >> /tmp/check-updates.log
-#/usr/bin/apt-get --download-only --assume-no dist-upgrade >> /tmp/check-updates.log
-
-#DEST='xxxxxxxxxxxxxxxx@xxxxxxxxxxxxxxxx.com'
-#/bin/cat /tmp/check-updates.log | /usr/bin/mail $DEST -s "Updates for www.server.com" 
-
 ## EoF ##
