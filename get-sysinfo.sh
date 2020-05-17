@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 ## get-sysinfo.sh
-## Gather information on Linux box (Debian/ Ubuntu centric)
-## and save that info onto a log file
+## Gather information on Linux box (Debian/ Ubuntu and Rackspace centric)
+## and saves that info onto a log file.
 
 HOSTNAME=`which hostname`
 MY_ECHO="`which echo` -e"
@@ -115,7 +115,7 @@ if [ -f "/etc/network/interfaces" ]; then
  $SEPARATOR >> $LOG
 fi
 
-## Obviously this is wayyy Rackspace centric
+## Obviously this is wayyy too much Rackspace centric
 if [ -f "/etc/netplan/rackspace-cloud.yaml" ]; then
  $MY_ECHO >> $LOG
  $MY_ECHO "Netplan Info:" >> $LOG
