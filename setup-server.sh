@@ -22,16 +22,17 @@ cp /$SETUP_FILES_DIR/.zile /home/$REGULAR_USER/
 /usr/bin/chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/
 /usr/bin/chmod 0700 /home/$REGULAR_USER
 
-
+## Email Reboot Notification
 /usr/bin/mkdir -p /usr/local/etc/scripts/security/
+cp /$SETUP_FILES_DIR/reboot-email.sh /usr/local/etc/scripts/security/
 
+## Backup first
 cp /etc/logrotate.conf /etc/logrotate.conf.ORIG
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.ORIG
 
 cp /$SETUP_FILES_DIR/logrotate.conf /etc/logrotate.conf
 cp /$SETUP_FILES_DIR/sshd_config /etc/ssh/sshd_config
 
-cp /$SETUP_FILES_DIR/reboot-email.sh /home/$REGULAR_USER/Zile/Backups/
 
 
 ## EoF ##
