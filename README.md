@@ -10,5 +10,9 @@ Get all sorts of information on a Linux box and save that info onto a log file.
 
 Send an email when a server is rebooted.
 
+**check-updates.sh**
+
+Issues an apt-get update a day and sends an email with the report
+
 
 
