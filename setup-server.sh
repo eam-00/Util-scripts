@@ -5,7 +5,7 @@
 REGULAR_USER=''
 SETUP_FILES_DIR=''
 
-
+## Install programs
 /usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
 
 ## Logwatch setup
@@ -27,6 +27,7 @@ cp /$SETUP_FILES_DIR/.zile /home/$REGULAR_USER/
 ## Email Reboot Notification
 /usr/bin/mkdir -p /usr/local/etc/scripts/security/
 cp /$SETUP_FILES_DIR/reboot-email.sh /usr/local/etc/scripts/security/
+/usr/bin/chmod +x /usr/local/etc/scripts/security/reboot-email.sh
 
 ## Logrotate
 cp /etc/logrotate.conf /etc/logrotate.conf.ORIG
