@@ -6,8 +6,6 @@ REGULAR_USER=''
 
 apt-get install logwatch zile monit mailutils rsnapshot
 
-/usr/bin/chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/
-/usr/bin/chmod 0700 /home/$REGULAR_USER
 
 
 ## Logwatch
@@ -20,6 +18,11 @@ cp /tmp/setup-server/logwatch.conf /etc/logwatch/conf/logwatch.conf
 /usr/bin/mkdir -p /home/$REGULAR_USER/Zile/Backups/
 cp /tmp/.zile /root/
 cp /tmp/.zile /home/$REGULAR_USER/
+
+## After Zile setup, set correct owner and permissions
+/usr/bin/chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/
+/usr/bin/chmod 0700 /home/$REGULAR_USER
+
 
 /usr/bin/mkdir -p /usr/local/etc/scripts/security/
 
