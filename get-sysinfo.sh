@@ -145,7 +145,7 @@ if [ -f "/etc/rsnapshot.conf" ]; then
  $MY_ECHO "Rsnapshot Info:" >> $LOG
  $MY_GREP -m1 snapshot_root /etc/rsnapshot.conf >> $LOG
  $MY_GREP "logfile" /etc/rsnapshot.conf | $MY_SED -n 2p >> $LOG
-
+ $MY_GREP -m3 "retain" /etc/rsnapshot.conf >> $LOG
 # cat /usr/local/etc/scripts/backups/tar-backups.sh >> /tmp/server-info.txt
 
 ## EoF ##
