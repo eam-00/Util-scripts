@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## get-sysinfo.sh
-## Gather information on Linux box (Debian/ Ubuntu and Rackspace centric)
+## Gathers information on a Linux box (Debian/ Ubuntu and Rackspace centric)
 ## and saves that info onto a log file.
 
 HOSTNAME=`which hostname`
