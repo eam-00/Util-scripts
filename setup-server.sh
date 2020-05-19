@@ -41,4 +41,8 @@ cp $SETUP_FILES_DIR/sshd_config /etc/ssh/sshd_config
 cp /etc/monit/monitrc /etc/monit/monitrc.ORIG
 cp $SETUP_FILES_DIR/monitrc /etc/monit/monitrc
 
+## Rsnapshot
+cp /etc/rsnapshot.conf /etc/rsnapshot.conf.ORIG
+cp $SETUP_FILES_DIR/rsnapshot.conf /etc/rsnapshot.conf
+
 ## EoF ##
