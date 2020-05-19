@@ -14,6 +14,8 @@ MY_DF=`which df`
 MY_IFCONFIG='/sbin/ifconfig'
 MY_IP='/usr/bin/ip'
 MY_NETSTAT='/bin/netstat'
+MY_GREP='/usr/bin/grep'
+MY_SED='/usr/bin/sed'
 LOG='/tmp/sysinfo.log'
 
 
@@ -141,8 +143,8 @@ $SEPARATOR >> $LOG
 if [ -f "/etc/rsnapshot.conf" ]; then
  $MY_ECHO >> $LOG
  $MY_ECHO "Rsnapshot Info:" >> $LOG
- grep -m1 snapshot_root /etc/rsnapshot.conf >> $LOG
- grep "logfile" /etc/rsnapshot.conf | sed -n 2p >> $LOG
+ $MY_GREP -m1 snapshot_root /etc/rsnapshot.conf >> $LOG
+ $MY_GREP "logfile" /etc/rsnapshot.conf | $MY_SED -n 2p >> $LOG
 
 # cat /usr/local/etc/scripts/backups/tar-backups.sh >> /tmp/server-info.txt
 
