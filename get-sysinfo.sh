@@ -138,6 +138,10 @@ fi
 $SEPARATOR >> $LOG
 
 # Snips from /etc/rsnapshot.conf
+
+grep -m1 snapshot_root /etc/rsnapshot.conf >> $LOG
+
+
 # cat /usr/local/etc/scripts/backups/tar-backups.sh >> /tmp/server-info.txt
 
 ## EoF ##
