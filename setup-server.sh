@@ -37,5 +37,8 @@ cp /$SETUP_FILES_DIR/logrotate.conf /etc/logrotate.conf
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.ORIG
 cp /$SETUP_FILES_DIR/sshd_config /etc/ssh/sshd_config
 
+## Monit
+cp /etc/monit/monitrc /etc/monit/monitrc.ORIG
+cp /$SETUP_FILES_DIR/monitrc /etc/monit/monitrc
 
 ## EoF ##
