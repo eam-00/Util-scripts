@@ -147,6 +147,11 @@ if [ -f "/etc/rsnapshot.conf" ]; then
  $MY_GREP "logfile" /etc/rsnapshot.conf | $MY_SED -n 2p >> $LOG
  $MY_GREP -m3 "retain" /etc/rsnapshot.conf >> $LOG
  $MY_GREP -m10 "localhost" /etc/rsnapshot.conf >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "Rsnapshot is not available" >> $LOG
+ $MY_ECHO >> $LOG
+fi 
 # cat /usr/local/etc/scripts/backups/tar-backups.sh >> /tmp/server-info.txt
 
 ## EoF ##
