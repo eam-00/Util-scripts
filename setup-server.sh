@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-## 
+## setup-server.sh
+## Set things the way it should be on a server.
+## Install stuff, copy config files and set permissions
 
 REGULAR_USER=''
 SETUP_FILES_DIR='/tmp'
