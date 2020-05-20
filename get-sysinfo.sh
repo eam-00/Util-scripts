@@ -114,8 +114,13 @@ if [ -f "/etc/network/interfaces" ]; then
  $MY_ECHO "Network Interfaces Info:" >> $LOG
  $MY_CAT /etc/network/interfaces >> $LOG
  $MY_ECHO >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "/etc/network/interfaces is not available" >> $LOG
+ $MY_ECHO >> $LOG
+fi 
+
  $SEPARATOR >> $LOG
-fi
 
 ## Obviously this is wayyy too much Rackspace centric
 if [ -f "/etc/netplan/rackspace-cloud.yaml" ]; then
@@ -123,8 +128,13 @@ if [ -f "/etc/netplan/rackspace-cloud.yaml" ]; then
  $MY_ECHO "Netplan Info:" >> $LOG
  $MY_CAT /etc/netplan/rackspace-cloud.yaml >> $LOG
  $MY_ECHO >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "Netplan is not available" >> $LOG
+ $MY_ECHO >> $LOG
+fi 
+
  $SEPARATOR >> $LOG
-fi
 
 if command -v $MY_NETSTAT > /dev/null 2>&1; then
  $MY_ECHO >> $LOG
