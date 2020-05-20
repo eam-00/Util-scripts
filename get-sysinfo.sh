@@ -143,7 +143,7 @@ if command -v $MY_NETSTAT > /dev/null 2>&1; then
  $MY_ECHO >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "$MY_NETSTAT is not available" >> $LOG
+ $MY_ECHO "Netstat is not available" >> $LOG
  $MY_ECHO >> $LOG
 fi
 
