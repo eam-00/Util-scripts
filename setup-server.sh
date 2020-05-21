@@ -16,10 +16,14 @@ cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
 cp $SETUP_FILES_DIR/logwatch.conf /etc/logwatch/conf/logwatch.conf
 
 ## Zile setup
-/usr/bin/mkdir -p /root/Zile/Backups/
-/usr/bin/mkdir -p /home/$REGULAR_USER/Zile/Backups/
-cp $SETUP_FILES_DIR/.zile /root/
-cp $SETUP_FILES_DIR/.zile /home/$REGULAR_USER/
+if command -v zile > /dev/null 2>&1; then
+ /usr/bin/mkdir -p /root/Zile/Backups/
+ /usr/bin/mkdir -p /home/$REGULAR_USER/Zile/Backups/
+ cp $SETUP_FILES_DIR/.zile /root/
+ cp $SETUP_FILES_DIR/.zile /home/$REGULAR_USER/
+else
+ echo -e "zile not installed"
+fi
 
 ## After Zile setup, set correct owner and permissions
 /usr/bin/chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/
