@@ -25,6 +25,16 @@ else
  echo -e "zile not installed"
 fi
 
+## Emacs
+if command -v emacs > /dev/null 2>&1; then
+ /usr/bin/mkdir -p /root/Emacs/Backups/
+ /usr/bin/mkdir -p /home/$REGULAR_USER/Emacs/Backups/
+ cp $SETUP_FILES_DIR/.emacs /root/
+ cp $SETUP_FILES_DIR/.emacs /home/$REGULAR_USER/
+else
+ echo -e "emacs not installed"
+fi
+
 ## After Zile setup, set correct owner and permissions
 /usr/bin/chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/
 /usr/bin/chmod 0700 /home/$REGULAR_USER
