@@ -22,7 +22,7 @@ if command -v zile > /dev/null 2>&1; then
  cp $SETUP_FILES_DIR/.zile /root/
  cp $SETUP_FILES_DIR/.zile /home/$REGULAR_USER/
 else
- echo -e "zile not installed"
+ echo -e "zile is not installed on this server"
 fi
 
 ## Emacs setup
@@ -32,7 +32,7 @@ if command -v emacs > /dev/null 2>&1; then
  cp $SETUP_FILES_DIR/.emacs /root/
  cp $SETUP_FILES_DIR/.emacs /home/$REGULAR_USER/
 else
- echo -e "emacs not installed"
+ echo -e "emacs is not installed on this server"
 fi
 
 ## After Zile and/ or Emacs setup, set correct owner and permissions
