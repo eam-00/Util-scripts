@@ -20,16 +20,23 @@ if [ -f "/root/.bashrc" ]; then
 fi
  cp $SETUP_FILES_DIR/.bashrc  /root/
 
-
 if [ -f "/$REGULAR_USER/.bashrc" ]; then
  cp /$REGULAR_USER/.bashrc /$REGULAR_USER/.bashrc.ORIG
 fi    
  cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER/
 
- 
-cp $SETUP_FILES_DIR/.profile /root/
-cp $SETUP_FILES_DIR/.profile /home/$REGULAR_USER/
 
+if [ -f "/root/.profile" ]; then
+ cp /root/.profile /root/.profile.ORIG
+fi
+ cp $SETUP_FILES_DIR/.profile /root/
+
+if [ -f "/home/$REGULAR_USER/.profile" ]; then
+ cp /home/$REGULAR_USER/.profile /home/$REGULAR_USER/.profile.ORIG
+fi
+ cp $SETUP_FILES_DIR/.profile /home/$REGULAR_USER/.profile
+
+ 
 ## Zile setup
 if command -v zile > /dev/null 2>&1; then
  /usr/bin/mkdir -p /root/Zile/Backups/
