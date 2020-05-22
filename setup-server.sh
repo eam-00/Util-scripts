@@ -15,9 +15,18 @@ SETUP_FILES_DIR='/tmp'
 cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
 cp $SETUP_FILES_DIR/logwatch.conf /etc/logwatch/conf/logwatch.conf
 
+if [ -f "/root/.bashrc" ]; then
+ cp /root/.bashrc /root/.bashrc.ORIG
+fi
+ cp $SETUP_FILES_DIR/.bashrc  /root/
 
-cp $SETUP_FILES_DIR/.bashrc  /root/
-cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER/
+
+if [ -f "/$REGULAR_USER/.bashrc" ]; then
+ cp /$REGULAR_USER/.bashrc /$REGULAR_USER/.bashrc.ORIG
+fi    
+ cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER/
+
+ 
 cp $SETUP_FILES_DIR/.profile /root/
 cp $SETUP_FILES_DIR/.profile /home/$REGULAR_USER/
 
