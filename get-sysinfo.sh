@@ -162,7 +162,17 @@ else
  $MY_ECHO "Rsnapshot is not available" >> $LOG
  $MY_ECHO >> $LOG
 fi 
-# cat /usr/local/etc/scripts/backups/tar-backups.sh >> /tmp/server-info.txt
+
+if [ -f "/usr/local/etc/scripts/backups/tar-backups.sh" ]; then
+ $MY_ECHO >> $LOG
+ $MY_ECHO "tar-backups.sh Info:" >> $LOG
+ $MY_CAT /usr/local/etc/scripts/backups/tar-backups.sh >> $LOG 
+ $MY_ECHO >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "tar-backups.sh is not available" >> $LOG
+ $MY_ECHO >> $LOG
+fi 
 
 ## EoF ##
 
