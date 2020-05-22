@@ -15,10 +15,11 @@ SETUP_FILES_DIR='/tmp'
 cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
 cp $SETUP_FILES_DIR/logwatch.conf /etc/logwatch/conf/logwatch.conf
 
-cp .bashrc /root/
-cp .bashrc /home/$REGULAR_USER/
-cp .profile /root/
-cp .profile /home/$REGULAR_USER/
+
+cp $SETUP_FILES_DIR/.bashrc  /root/
+cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER/
+cp $SETUP_FILES_DIR/.profile /root/
+cp $SETUP_FILES_DIR/.profile /home/$REGULAR_USER/
 
 ## Zile setup
 if command -v zile > /dev/null 2>&1; then
