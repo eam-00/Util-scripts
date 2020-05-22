@@ -18,12 +18,12 @@ cp $SETUP_FILES_DIR/logwatch.conf /etc/logwatch/conf/logwatch.conf
 if [ -f "/root/.bashrc" ]; then
  cp /root/.bashrc /root/.bashrc.ORIG
 fi
- cp $SETUP_FILES_DIR/.bashrc  /root/
+ cp $SETUP_FILES_DIR/.bashrc  /root/.bashrc
 
 if [ -f "/$REGULAR_USER/.bashrc" ]; then
- cp /$REGULAR_USER/.bashrc /$REGULAR_USER/.bashrc.ORIG
+ cp /home/$REGULAR_USER/.bashrc /home/$REGULAR_USER/.bashrc.ORIG
 fi    
- cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER/
+ cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER/.bashrc
 
 
 if [ -f "/root/.profile" ]; then
