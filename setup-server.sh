@@ -67,6 +67,9 @@ fi
 /usr/bin/chmod 0700 /home/$REGULAR_USER
 
 
+/usr/bin/mkdir -p /root/admin/security/
+cp  $SETUP_FILES_DIR/firewall.rules.start /root/admin/security/firewall.rules.start
+
 ## Email Reboot Notification
 /usr/bin/mkdir -p /usr/local/etc/scripts/security/
 cp $SETUP_FILES_DIR/reboot-email.sh /usr/local/etc/scripts/security/
