@@ -2,7 +2,9 @@
 
 ## setup-server.sh
 ## Set things the way it should be on a server.
-## Install stuff, copy config files and set permissions
+## Install some stuff, copy config files and set permissions
+## REGULAR_USER is the admin user (not root) that will take
+## care of things on the server
 
 REGULAR_USER=''
 SETUP_FILES_DIR='/tmp'
