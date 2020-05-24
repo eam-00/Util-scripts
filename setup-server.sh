@@ -91,8 +91,16 @@ cp $SETUP_FILES_DIR/banner /etc/ssh/banner
 cp /etc/monit/monitrc /etc/monit/monitrc.ORIG
 cp $SETUP_FILES_DIR/monitrc /etc/monit/monitrc
 
+
 ## Rsnapshot
 cp /etc/rsnapshot.conf /etc/rsnapshot.conf.ORIG
 cp $SETUP_FILES_DIR/rsnapshot.conf /etc/rsnapshot.conf
+
+
+## Crontabs
+if [ -f "/var/spool/cron/root" ]; then
+ cp /var/spool/cron/root /root/admin/root.crontab.ORIG
+ cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/root 
+fi
 
 ## EoF ##
