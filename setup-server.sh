@@ -97,6 +97,13 @@ cp /etc/rsnapshot.conf /etc/rsnapshot.conf.ORIG
 cp $SETUP_FILES_DIR/rsnapshot.conf /etc/rsnapshot.conf
 
 
+## Aliases
+if [ -f "/etc/aliases" ]; then
+ cp /etc/aliases /etc/aliases.ORIG
+ cp $SETUP_FILES_DIR/aliases /etc/aliases
+fi
+
+
 ## Crontabs
 if [ -f "/var/spool/cron/root" ]; then
  cp /var/spool/cron/root /root/admin/root.crontab.ORIG
