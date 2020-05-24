@@ -67,8 +67,11 @@ fi
 /usr/bin/chmod 0700 /home/$REGULAR_USER
 
 
+## Firewall scripts
 /usr/bin/mkdir -p /root/admin/security/
 cp  $SETUP_FILES_DIR/firewall.rules.start /root/admin/security/firewall.rules.start
+cp  $SETUP_FILES_DIR/firewall.rules.stop  /root/admin/security/firewall.rules.stop
+
 
 ## Email Reboot Notification
 /usr/bin/mkdir -p /usr/local/etc/scripts/security/
