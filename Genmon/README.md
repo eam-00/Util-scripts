@@ -6,6 +6,6 @@ A couple of bash scripts I use to get information on the XFCE Panel, using the [
 
 ![genMon-time.sh on the XFCE Panel](Pics/genMon-time.sh.png)
 
-Prints the local time, using a specific format: "17:23". Also, disables any form of tool tip when mouse over, as I find those really annoying.
+Prints the local time, using a specific format: "17:23". Also, the script disables any form of tooltip when mouse over it, as I find that particularly annoying.
 
 
