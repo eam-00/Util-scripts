@@ -174,7 +174,9 @@ else
  $MY_ECHO >> $LOG
  $MY_ECHO "tar-backups.sh is not available" >> $LOG
  $MY_ECHO >> $LOG
-fi 
+fi
+
+$SEPARATOR >> $LOG
 
 if [ -f "/usr/local/etc/scripts/security/reboot.sh" ]; then
  $MY_ECHO >> $LOG
@@ -185,6 +187,8 @@ else
  $MY_ECHO >> $LOG
  $MY_ECHO "reboot.sh is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
-fi 
+fi
+
+$SEPARATOR >> $LOG
 
 ## EoF ##
