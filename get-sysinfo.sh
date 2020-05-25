@@ -21,6 +21,7 @@ LOG='/tmp/sysinfo.log'
 
 $MY_ECHO "Hostname:" > $LOG
 $HOSTNAME >> $LOG
+$MY_ECHO >> $LOG
 $SEPARATOR >> $LOG
 
 $MY_ECHO >> $LOG
