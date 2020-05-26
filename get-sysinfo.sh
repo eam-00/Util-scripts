@@ -41,10 +41,13 @@ if [ -f "/etc/os-release" ]; then
  $MY_ECHO "OS Release:" >> $LOG
  $MY_CAT /etc/os-release >> $LOG
  $MY_ECHO >> $LOG
- $SEPARATOR >> $LOG
+ else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "/etc/os-release is not available on this server" >> $LOG
+ $MY_ECHO >> $LOG
 fi
 
-$MY_ECHO >> $LOG
+$SEPARATOR >> $LOG
 
 if [ -f "/etc/debian_version" ]; then
  $MY_ECHO "Debian Version:" >> $LOG
