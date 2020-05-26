@@ -12,11 +12,14 @@ CAT=`which cat`
 MY_MSG='/tmp/server-reboot.msg'
 MY_ECHO='/bin/echo -e'
 MY_DATE=`/bin/date`
+DELETE='/usr/bin/rm -f'
 
 $MY_ECHO "ALERT $HOSTNAME rebooted" > $MY_MSG
 $MY_ECHO "$HOSTNAME was rebooted at $MY_DATE" >> $MY_MSG
 
-$CAT $MY_MSG | $MAIL ${DEST} -s "ALERT $HOSTNAME rebooted"
+$CAT $MY_MSG | $MAIL -s "ALERT $HOSTNAME rebooted" $DEST
+
+$DELETE $MY_MSG
 
 ## EoF ##
 
