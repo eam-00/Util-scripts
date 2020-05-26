@@ -18,7 +18,6 @@ MY_GREP='/usr/bin/grep'
 MY_SED='/usr/bin/sed'
 LOG='/tmp/sysinfo.log'
 
-
 $MY_ECHO "Hostname:" > $LOG
 $HOSTNAME >> $LOG
 $MY_ECHO >> $LOG
@@ -30,10 +29,13 @@ if [ -f "/etc/lsb-release" ]; then
  $MY_ECHO "LSB Release:" >> $LOG
  $MY_CAT /etc/lsb-release >> $LOG
  $MY_ECHO >> $LOG
- $SEPARATOR >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "/etc/lsb-release is not available on this server" >> $LOG
+ $MY_ECHO >> $LOG
 fi
 
-$MY_ECHO >> $LOG
+$SEPARATOR >> $LOG
 
 if [ -f "/etc/os-release" ]; then
  $MY_ECHO "OS Release:" >> $LOG
