@@ -188,6 +188,19 @@ fi
 
 $SEPARATOR >> $LOG
 
+if [ -f "/usr/local/etc/scripts/backups/local.manual.backups.pl" ]; then
+ $MY_ECHO >> $LOG
+ $MY_ECHO "local.manual.backups.pl Info:" >> $LOG
+ $MY_CAT /usr/local/etc/scripts/backups/local.manual.backups.pl >> $LOG 
+ $MY_ECHO >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "local.manual.backups.pl is not available on this server" >> $LOG
+ $MY_ECHO >> $LOG
+fi
+
+$SEPARATOR >> $LOG
+
 if [ -f "/usr/local/etc/scripts/security/reboot.sh" ]; then
  $MY_ECHO >> $LOG
  $MY_ECHO "reboot.sh Info:" >> $LOG
