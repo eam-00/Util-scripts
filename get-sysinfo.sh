@@ -87,7 +87,7 @@ if command -v $MY_IFCONFIG > /dev/null 2>&1; then
  $MY_IFCONFIG >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "$MY_IFCONFIG is not available" >> $LOG
+ $MY_ECHO "$MY_IFCONFIG is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
 fi
 
@@ -104,7 +104,7 @@ if command -v $MY_IP > /dev/null 2>&1; then
  $MY_ECHO >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "$MY_IP is not available" >> $LOG
+ $MY_ECHO "$MY_IP is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
 fi
 
@@ -117,7 +117,7 @@ if [ -f "/etc/network/interfaces" ]; then
  $MY_ECHO >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "/etc/network/interfaces is not available" >> $LOG
+ $MY_ECHO "/etc/network/interfaces is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
 fi 
 
@@ -131,7 +131,7 @@ if [ -f "/etc/netplan/rackspace-cloud.yaml" ]; then
  $MY_ECHO >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "Netplan is not available" >> $LOG
+ $MY_ECHO "Netplan is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
 fi 
 
@@ -144,7 +144,7 @@ if command -v $MY_NETSTAT > /dev/null 2>&1; then
  $MY_ECHO >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "Netstat is not available" >> $LOG
+ $MY_ECHO "Netstat is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
 fi
 
@@ -161,7 +161,7 @@ if [ -f "/etc/rsnapshot.conf" ]; then
  $MY_ECHO >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "Rsnapshot is not available" >> $LOG
+ $MY_ECHO "Rsnapshot is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
 fi
 
@@ -174,7 +174,7 @@ if [ -f "/usr/local/etc/scripts/backups/tar-backups.sh" ]; then
  $MY_ECHO >> $LOG
 else
  $MY_ECHO >> $LOG
- $MY_ECHO "tar-backups.sh is not available" >> $LOG
+ $MY_ECHO "tar-backups.sh is not available on this server" >> $LOG
  $MY_ECHO >> $LOG
 fi
 
