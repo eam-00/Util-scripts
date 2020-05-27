@@ -50,6 +50,7 @@ fi
 $SEPARATOR >> $LOG
 
 if [ -f "/etc/debian_version" ]; then
+ $MY_ECHO >> $LOG
  $MY_ECHO "Debian Version:" >> $LOG
  $MY_CAT /etc/debian_version >> $LOG
  $MY_ECHO >> $LOG
