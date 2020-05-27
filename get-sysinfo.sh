@@ -39,6 +39,7 @@ fi
 $SEPARATOR >> $LOG
 
 if [ -f "/etc/os-release" ]; then
+ $MY_ECHO >> $LOG
  $MY_ECHO "OS Release:" >> $LOG
  $MY_CAT /etc/os-release >> $LOG
  $MY_ECHO >> $LOG
