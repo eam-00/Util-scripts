@@ -111,7 +111,7 @@ if [ -f "/var/spool/cron/root" ]; then
 fi
 
 ## Crontabs - Debian
-if [ -f "/var/spool/cron/crontabs/" ]; then
+if [ -f "/var/spool/cron/crontabs/root" ]; then
  cp /var/spool/cron/crontabs/root /root/admin/root.crontab.ORIG
  cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/crontabs/root 
 fi
