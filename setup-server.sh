@@ -118,6 +118,6 @@ if [ -f "/var/spool/cron/crontabs/root" ]; then
  cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/crontabs/root 
 fi
 
-chown root:root /var/spool/cron/crontabs/root
+chown root:crontab /var/spool/cron/crontabs/root
 
 ## EoF ##
