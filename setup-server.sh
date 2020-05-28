@@ -104,10 +104,16 @@ if [ -f "/etc/aliases" ]; then
 fi
 
 
-## Crontabs
+## Crontabs - CentOS
 if [ -f "/var/spool/cron/root" ]; then
  cp /var/spool/cron/root /root/admin/root.crontab.ORIG
  cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/root 
+fi
+
+## Crontabs - Debian
+if [ -f "/var/spool/cron/crontabs/" ]; then
+ cp /var/spool/cron/crontabs/root /root/admin/root.crontab.ORIG
+ cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/crontabs/root 
 fi
 
 ## EoF ##
