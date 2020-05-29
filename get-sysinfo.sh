@@ -218,4 +218,17 @@ fi
 
 $SEPARATOR >> $LOG
 
+if [ -f "/etc/mongod.conf" ]; then
+ $MY_ECHO >> $LOG
+ $MY_ECHO "MongoDB Configuration Info:" >> $LOG
+ $MY_CAT /etc/mongod.conf >> $LOG 
+ $MY_ECHO >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "MongoDB is not available on this server" >> $LOG
+ $MY_ECHO >> $LOG
+fi
+
+$SEPARATOR >> $LOG
+
 ## EoF ##
