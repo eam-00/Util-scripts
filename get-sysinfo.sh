@@ -160,6 +160,19 @@ else
  $MY_ECHO >> $LOG
 fi
 
+ $SEPARATOR >> $LOG
+
+if [ -f "/etc/resolv.conf" ]; then
+ $MY_ECHO >> $LOG
+ $MY_ECHO "Resolv.conf Info:" >> $LOG
+ $MY_CAT /etc/resolv.conf >> $LOG
+ $MY_ECHO >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "Resolv.conf is not available on this server" >> $LOG
+ $MY_ECHO >> $LOG
+fi
+
 $SEPARATOR >> $LOG
 
 # Snips from /etc/rsnapshot.conf
