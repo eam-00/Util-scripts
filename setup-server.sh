@@ -12,6 +12,13 @@ SETUP_FILES_DIR='/tmp'
 ## Install programs
 /usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
 
+## Create User & Home Dirs
+/usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER $REGULAR_USER
+mkdir /home/$REGULAR_USER
+chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER
+chmod 0700 /home/$REGULAR_USER
+
+
 ## Logwatch setup
 /usr/bin/mkdir -p /var/cache/logwatch
 cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
