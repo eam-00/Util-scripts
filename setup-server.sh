@@ -69,7 +69,7 @@ else
  echo -e "emacs is not installed on this server"
 fi
 
-## After Zile and/ or Emacs setup, set correct owner and permissions
+## After Zile and/ or Emacs, .bashrc and .profile setup, set correct owner and permissions
 /usr/bin/chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER/
 /usr/bin/chmod 0700 /home/$REGULAR_USER
 
@@ -97,6 +97,7 @@ cp $SETUP_FILES_DIR/banner /etc/ssh/banner
 ## Monit
 cp /etc/monit/monitrc /etc/monit/monitrc.ORIG
 cp $SETUP_FILES_DIR/monitrc /etc/monit/monitrc
+cp $SETUP_FILES_DIR/monit.pem /etc/monit/monit.pem
 
 
 ## Rsnapshot
