@@ -21,7 +21,9 @@ chmod 0700 /home/$REGULAR_USER
 
 ## Logwatch setup
 /usr/bin/mkdir -p /var/cache/logwatch
-cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
+if [ -f "/etc/logwatch/conf/logwatch.conf" ]; then
+    cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
+fi    
 cp $SETUP_FILES_DIR/logwatch.conf /etc/logwatch/conf/logwatch.conf
 
 
@@ -56,7 +58,7 @@ if command -v zile > /dev/null 2>&1; then
  cp $SETUP_FILES_DIR/.zile /root/
  cp $SETUP_FILES_DIR/.zile /home/$REGULAR_USER/
 else
- echo -e "zile is not installed on this server"
+ echo "zile is not installed on this server"
 fi
 
 ## Emacs setup
@@ -66,7 +68,7 @@ if command -v emacs > /dev/null 2>&1; then
  cp $SETUP_FILES_DIR/.emacs /root/
  cp $SETUP_FILES_DIR/.emacs /home/$REGULAR_USER/
 else
- echo -e "emacs is not installed on this server"
+ echo "Emacs is not installed on this server"
 fi
 
 ## After Zile and/ or Emacs, .bashrc and .profile setup, set correct owner and permissions
@@ -89,10 +91,12 @@ cp $SETUP_FILES_DIR/reboot-email.sh /usr/local/etc/scripts/security/
 cp /etc/logrotate.conf /etc/logrotate.conf.ORIG
 cp $SETUP_FILES_DIR/logrotate.conf /etc/logrotate.conf
 
+
 ## SSHD
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.ORIG
 cp $SETUP_FILES_DIR/sshd_config /etc/ssh/sshd_config
 cp $SETUP_FILES_DIR/banner /etc/ssh/banner
+
 
 ## Monit
 cp /etc/monit/monitrc /etc/monit/monitrc.ORIG
@@ -121,8 +125,7 @@ fi
 chown root:root /var/spool/cron/root
 
 ## Crontabs - Debian
-if [ -f "/var/spool/cron/crontabs/root" ]; then
- cp /var/spool/cron/crontabs/root /root/admin/root.crontab.ORIG
+if [ -d "/var/spool/cron/crontabs/" ]; then
  cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/crontabs/root 
 fi
 
