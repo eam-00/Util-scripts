@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-DISK='/dev/mapper/optiplex--755--usfm--vg-root'
-PERCENTAGE='94'
+DISK='/dev/mapper/t60p--vg-root'
+PERCENTAGE='54'
 DF='/bin/df'
 MY_TAIL='/usr/bin/tail -1'
 AWK='/usr/bin/awk'
