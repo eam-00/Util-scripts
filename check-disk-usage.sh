@@ -9,8 +9,10 @@ MY_TR='/usr/bin/tr -cd '0-9\n''
 
 if [ $($MY_DF $DISK | $MY_TAIL | $AWK '{print $1}' | $MY_TR) -gt $PERCENTAGE ]; then
  echo "Usa mucho espacio de HDD"
+ exit 1
 else
  echo "No usa mucho espacio de HDD"
+ exit 0
 fi
 
 ## EoF ##
