@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+## check-disk-usage.sh
+## Checks a disk or partition and if the usage goes above the
+## PERCENTAGE it prints a warning.
+## Used to make checks via Monit 
+
 DISK='/dev/mapper/t60p--vg-root'
 PERCENTAGE='56'
 MY_DF='/bin/df --output=pcent'
