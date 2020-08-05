@@ -2,12 +2,12 @@
 
 DISK='/dev/mapper/t60p--vg-root'
 PERCENTAGE='54'
-DF='/bin/df'
+MY_DF='/bin/df --output=pcent'
 MY_TAIL='/usr/bin/tail -1'
 AWK='/usr/bin/awk'
-TR='/usr/bin/tr'
+MY_TR='/usr/bin/tr -cd '0-9\n''
 
-if [ $($DF --output=pcent $DISK | $MY_TAIL | $AWK '{print $1}' | $TR -cd '0-9\n') -gt $PERCENTAGE ]; then
+if [ $($MY_DF $DISK | $MY_TAIL | $AWK '{print $1}' | $MY_TR) -gt $PERCENTAGE ]; then
  echo "Usa mucho espacio de HDD"
 else
  echo "No usa mucho espacio de HDD"
