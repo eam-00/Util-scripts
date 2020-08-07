@@ -12,6 +12,7 @@ SETUP_FILES_DIR='/tmp'
 ## Install programs
 /usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
 
+
 ## Create User & Home Dirs
 /usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER $REGULAR_USER
 mkdir /home/$REGULAR_USER
@@ -86,6 +87,13 @@ cp  $SETUP_FILES_DIR/firewall.rules.stop  /root/admin/security/firewall.rules.st
 /usr/bin/mkdir -p /usr/local/etc/scripts/security/
 cp $SETUP_FILES_DIR/reboot-email.sh /usr/local/etc/scripts/security/
 /usr/bin/chmod +x /usr/local/etc/scripts/security/reboot-email.sh
+
+
+## Disk Usage for Monit
+/usr/bin/mkdir -p /usr/local/etc/scripts/utils/
+cp $SETUP_FILES_DIR/check-disk-usage.sh /usr/local/etc/scripts/utils/
+/usr/bin/chmod +x /usr/local/etc/scripts/utils/check-disk-usage.sh
+
 
 ## Logrotate
 cp /etc/logrotate.conf /etc/logrotate.conf.ORIG
