@@ -231,6 +231,19 @@ fi
 
 $SEPARATOR >> $LOG
 
+if [ -f "/usr/local/etc/scripts/security/reboot-email.sh" ]; then
+ $MY_ECHO >> $LOG
+ $MY_ECHO "reboot.sh Info:" >> $LOG
+ $MY_CAT /usr/local/etc/scripts/security/reboot-email.sh >> $LOG
+ $MY_ECHO >> $LOG
+else
+ $MY_ECHO >> $LOG
+ $MY_ECHO "reboot-email.sh is not available on this server" >> $LOG
+ $MY_ECHO >> $LOG
+fi
+
+$SEPARATOR >> $LOG
+
 if [ -f "/etc/mongod.conf" ]; then
  $MY_ECHO >> $LOG
  $MY_ECHO "MongoDB Configuration Info:" >> $LOG
