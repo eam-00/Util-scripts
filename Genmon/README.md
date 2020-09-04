@@ -14,7 +14,7 @@ Prints the first value of the CPU load average, also a FontAwesome icon right be
 
 Prints the percentage of RAM usage, also a FontAwesome icon right before the RAM percentage.
 
-**genMon-date.sh**
+## genMon-date.sh
 
 Prints the date on a specific format, also when clicked, it pops a calendar with the current month displayed.
 
