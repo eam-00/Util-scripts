@@ -2,7 +2,7 @@
 
 A couple of Bash scripts I use to put information onto the XFCE Panel, using the [Genmon Plugin](https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin).
 
-**genMon-time.sh**
+## genMon-time.sh
 
 ![genMon-time.sh on the XFCE Panel](Pics/genMon-time.sh.png)
 
