@@ -12,7 +12,7 @@ Prints the first value of the CPU load average, also a FontAwesome icon right be
 
 ## genMon-RAM.sh ![genMon-RAM.sh on the XFCE Panel](Pics/genMon-RAM.sh.png)
 
-Prints the percentage of RAM usage, also a FontAwesome icon right before the RAM percentage.
+Prints the percentage of RAM been used, also a FontAwesome icon right before the RAM percentage.
 
 ## genMon-date.sh
 
