@@ -13,5 +13,5 @@ echo "<txtclick>"xterm -hold -e /usr/bin/cal"</txtclick>"
 else
 echo "<txtclick>"xfce4-terminal --hold --command=/usr/bin/cal"</txtclick>"
 fi
-                                                                                                                                                               
+
 ## EoF ##
