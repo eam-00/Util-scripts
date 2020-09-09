@@ -14,7 +14,7 @@ Prints the first value of the CPU load average, also a FontAwesome icon right be
 
 Prints the percentage of RAM been used, also a FontAwesome icon right before the RAM percentage.
 
-## genMon-date.sh
+## genMon-date.sh ![genMon-date.sh on the XFCE Panel](Pics/genMon-date.sh.png)
 
 Prints the date on a specific format, also when clicked, it pops a calendar with the current month displayed.
 
