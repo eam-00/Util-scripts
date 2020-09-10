@@ -18,5 +18,7 @@ Prints the percentage of RAM been used, also a FontAwesome icon right before the
 
 Prints the date on a specific format, also when clicked, it pops a calendar with the current month displayed.
 
+## genMon-bsas-weather.sh ![genMon-bsas-weather.sh on the XFCE Panel](Pics/genMon-bsas-weather.sh.png)
+
 
 
