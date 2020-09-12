@@ -3,8 +3,9 @@
 ## setup-server.sh
 ## Set things the way it should be on a server.
 ## Install some stuff, copy config files and set permissions
-## REGULAR_USER is the admin user (not root) that will take
-## care of things on the server
+## REGULAR_USER_00 & REGULAR_USER_01 are the admin user (not root)
+## and another plain vanilla users that will take care of things on
+## the server
 
 REGULAR_USER_00=''
 REGULAR_USER_01=''
