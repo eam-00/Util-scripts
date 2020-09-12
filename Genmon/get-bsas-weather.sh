@@ -14,13 +14,13 @@ LOG='/tmp/aep.tmp'
 $WGET $FULL_FORMAT > $LOG
 
 ## Short format:
-## If you use this format, be sure to edit the file $HOME/Local/Scripts/genmon/genMon-bsas-weather.sh
+## If you use this format, be sure to edit the file ~/Local/Scripts/genmon/genMon-bsas-weather.sh
 ## $WGET $SHORT_FORMAT > $LOG
 
 #############
 ## Cronjob ##
 #############
-## @reboot /bin/bash $HOME/Local/Scripts/genmon/get-bsas-weather.sh
-## */19 * * * * /bin/bash $HOME/Local/Scripts/genmon/get-bsas-weather.sh
+## @reboot /bin/bash ~/Local/Scripts/genmon/get-bsas-weather.sh
+## */19 * * * * /bin/bash ~/Local/Scripts/genmon/get-bsas-weather.sh
 
 ## EoF ##
