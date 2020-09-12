@@ -39,10 +39,10 @@ if [ -f "/root/.bashrc" ]; then
 fi
  cp $SETUP_FILES_DIR/.bashrc  /root/.bashrc
 
-if [ -f "/$REGULAR_USER/.bashrc" ]; then
- cp /home/$REGULAR_USER/.bashrc /home/$REGULAR_USER/.bashrc.ORIG
+if [ -f "/$REGULAR_USER_00/.bashrc" ]; then
+ cp /home/$REGULAR_USER_00/.bashrc /home/$REGULAR_USER_00/.bashrc.ORIG
 fi    
- cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER/.bashrc
+ cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER_00/.bashrc
 
 
 ## Dot Profile
@@ -51,10 +51,10 @@ if [ -f "/root/.profile" ]; then
 fi
  cp $SETUP_FILES_DIR/.profile /root/
 
-if [ -f "/home/$REGULAR_USER/.profile" ]; then
- cp /home/$REGULAR_USER/.profile /home/$REGULAR_USER/.profile.ORIG
+if [ -f "/home/$REGULAR_USER_00/.profile" ]; then
+ cp /home/$REGULAR_USER_00/.profile /home/$REGULAR_USER_00/.profile.ORIG
 fi
- cp $SETUP_FILES_DIR/.profile /home/$REGULAR_USER/.profile
+ cp $SETUP_FILES_DIR/.profile /home/$REGULAR_USER_00/.profile
 
  
 ## Zile setup
