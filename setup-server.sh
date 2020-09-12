@@ -7,11 +7,11 @@
 ## care of things on the server
 
 REGULAR_USER_00=''
+REGULAR_USER_01=''
 SETUP_FILES_DIR='/tmp'
 
 ## Install programs
 /usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
-
 
 ## Create User & Home Dirs
 /usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER_00 $REGULAR_USER_00
@@ -19,6 +19,10 @@ mkdir /home/$REGULAR_USER_00
 chown -R $REGULAR_USER_00:$REGULAR_USER_00 /home/$REGULAR_USER_00
 chmod 0700 /home/$REGULAR_USER_00
 
+/usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER_01 $REGULAR_USER_01
+mkdir /home/$REGULAR_USER_01
+chown -R $REGULAR_USER_01:$REGULAR_USER_01 /home/$REGULAR_USER_01
+chmod 0700 /home/$REGULAR_USER_01
 
 ## Logwatch setup
 /usr/bin/mkdir -p /var/cache/logwatch
