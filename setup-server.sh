@@ -6,7 +6,7 @@
 ## REGULAR_USER is the admin user (not root) that will take
 ## care of things on the server
 
-REGULAR_USER=''
+REGULAR_USER_00=''
 SETUP_FILES_DIR='/tmp'
 
 ## Install programs
@@ -14,10 +14,10 @@ SETUP_FILES_DIR='/tmp'
 
 
 ## Create User & Home Dirs
-/usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER $REGULAR_USER
-mkdir /home/$REGULAR_USER
-chown -R $REGULAR_USER:$REGULAR_USER /home/$REGULAR_USER
-chmod 0700 /home/$REGULAR_USER
+/usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER_00 $REGULAR_USER_00
+mkdir /home/$REGULAR_USER_00
+chown -R $REGULAR_USER_00:$REGULAR_USER_00 /home/$REGULAR_USER_00
+chmod 0700 /home/$REGULAR_USER_00
 
 
 ## Logwatch setup
