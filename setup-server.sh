@@ -9,7 +9,8 @@
 
 REGULAR_USER_00=''
 REGULAR_USER_01=''
-SETUP_FILES_DIR='/tmp'
+## Without trailing slash [!!!!!]
+SETUP_FILES_DIR='/tmp/setup'
 
 ## Install programs
 /usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
