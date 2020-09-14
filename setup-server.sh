@@ -25,6 +25,8 @@ chmod 0700 /home/$REGULAR_USER_00
 mkdir /home/$REGULAR_USER_01
 chown -R $REGULAR_USER_01:$REGULAR_USER_01 /home/$REGULAR_USER_01
 chmod 0700 /home/$REGULAR_USER_01
+## UGLY!
+## chmod +x /home
 
 ## Logwatch setup
 /usr/bin/mkdir -p /var/cache/logwatch
