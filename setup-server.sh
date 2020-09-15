@@ -153,4 +153,7 @@ fi
 
 chown root:crontab /var/spool/cron/crontabs/root
 
+## /etc/apt/apt.conf.d/10periodic
+## /etc/apt/apt.conf.d/50unattended-upgrades
+
 ## EoF ##
