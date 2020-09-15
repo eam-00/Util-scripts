@@ -17,7 +17,6 @@ USERADD='/usr/sbin/useradd'
 SETUP_FILES_DIR='/tmp/setup'
 
 
-
 ## Install programs
 /usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
 
@@ -153,7 +152,7 @@ fi
 
 chown root:crontab /var/spool/cron/crontabs/root
 
-## /etc/apt/apt.conf.d/10periodic
-## /etc/apt/apt.conf.d/50unattended-upgrades
+## cp /etc/apt/apt.conf.d/10periodic /etc/apt/apt.conf.d/_ORIG.10periodic.ORIG
+## cp /etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/5_ORIG.0unattended-upgrades.ORIG
 
 ## EoF ##
