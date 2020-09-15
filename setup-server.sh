@@ -9,8 +9,14 @@
 
 REGULAR_USER_00=''
 REGULAR_USER_01=''
+
+APT='/usr/bin/apt-get'
+USERADD='/usr/sbin/useradd'
+
 ## Without trailing slash [!!!!!]
 SETUP_FILES_DIR='/tmp/setup'
+
+
 
 ## Install programs
 /usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
