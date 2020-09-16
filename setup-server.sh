@@ -10,18 +10,19 @@
 REGULAR_USER_00=''
 REGULAR_USER_01=''
 
-APT='/usr/bin/apt-get'
-USERADD='/usr/sbin/useradd'
+MY_APT='/usr/bin/apt-get'
+MY_USERADD='/usr/sbin/useradd'
+MY_CHOWN='chown'
+MY_MKDIR='/usr/bin/mkdir'
 
 ## Without trailing slash [!!!!!]
 SETUP_FILES_DIR='/tmp/setup'
 
-
 ## Install programs
-/usr/bin/apt-get install logwatch zile monit mailutils rsnapshot
+$MY_APT install logwatch zile monit mailutils rsnapshot
 
 ## Create User & Home Dirs
-/usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER_00 $REGULAR_USER_00
+$MY_USERADD --shell /bin/bash --home /home/$REGULAR_USER_00 $REGULAR_USER_00
 mkdir /home/$REGULAR_USER_00
 chown -R $REGULAR_USER_00:$REGULAR_USER_00 /home/$REGULAR_USER_00
 chmod 0700 /home/$REGULAR_USER_00
