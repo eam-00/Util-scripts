@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
 ## genMon-load.sh
 ## Prints the first value of the CPU load average, also a FontAwesome icon right before the load info
