@@ -13,7 +13,9 @@ REGULAR_USER_01=''
 MY_APT='/usr/bin/apt-get'
 MY_USERADD='/usr/sbin/useradd'
 MY_CHOWN='chown'
+MY_CHMOD='chmod'
 MY_MKDIR='/usr/bin/mkdir'
+
 
 ## Without trailing slash [!!!!!]
 SETUP_FILES_DIR='/tmp/setup'
@@ -23,9 +25,9 @@ $MY_APT install logwatch zile monit mailutils rsnapshot
 
 ## Create User & Home Dirs
 $MY_USERADD --shell /bin/bash --home /home/$REGULAR_USER_00 $REGULAR_USER_00
-mkdir /home/$REGULAR_USER_00
-chown -R $REGULAR_USER_00:$REGULAR_USER_00 /home/$REGULAR_USER_00
-chmod 0700 /home/$REGULAR_USER_00
+$MY_MKDIR /home/$REGULAR_USER_00
+$MY_CHOWN -R $REGULAR_USER_00:$REGULAR_USER_00 /home/$REGULAR_USER_00
+$MY_CHMOD 0700 /home/$REGULAR_USER_00
 
 /usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER_01 $REGULAR_USER_01
 mkdir /home/$REGULAR_USER_01
