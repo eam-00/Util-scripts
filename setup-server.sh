@@ -12,8 +12,8 @@ REGULAR_USER_01=''
 
 MY_APT='/usr/bin/apt-get'
 MY_USERADD='/usr/sbin/useradd'
-MY_CHOWN='chown'
-MY_CHMOD='chmod'
+MY_CHOWN='/usr/bin/chown'
+MY_CHMOD='/usr/bin/chmod'
 MY_MKDIR='/usr/bin/mkdir'
 
 
@@ -38,7 +38,7 @@ $MY_CHMOD 0700 /home/$REGULAR_USER_01
 ## chmod +x /home
 
 ## Logwatch setup
-/usr/bin/mkdir -p /var/cache/logwatch
+$MY_MKDIR -p /var/cache/logwatch
 if [ -f "/etc/logwatch/conf/logwatch.conf" ]; then
     cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.ORIG
 fi    
