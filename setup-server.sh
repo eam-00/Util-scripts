@@ -29,11 +29,12 @@ $MY_MKDIR /home/$REGULAR_USER_00
 $MY_CHOWN -R $REGULAR_USER_00:$REGULAR_USER_00 /home/$REGULAR_USER_00
 $MY_CHMOD 0700 /home/$REGULAR_USER_00
 
-/usr/sbin/useradd --shell /bin/bash --home /home/$REGULAR_USER_01 $REGULAR_USER_01
-mkdir /home/$REGULAR_USER_01
-chown -R $REGULAR_USER_01:$REGULAR_USER_01 /home/$REGULAR_USER_01
-chmod 0700 /home/$REGULAR_USER_01
-## UGLY!
+$MY_USERADD --shell /bin/bash --home /home/$REGULAR_USER_01 $REGULAR_USER_01
+$MY_MKDIR /home/$REGULAR_USER_01
+$MY_CHOWN -R $REGULAR_USER_01:$REGULAR_USER_01 /home/$REGULAR_USER_01
+$MY_CHMOD 0700 /home/$REGULAR_USER_01
+
+## UGLY! Must fix this!
 ## chmod +x /home
 
 ## Logwatch setup
