@@ -71,8 +71,8 @@ fi
  
 ## Zile setup
 if command -v zile > /dev/null 2>&1; then
- /usr/bin/mkdir -p /root/Zile/Backups/
- /usr/bin/mkdir -p /home/$REGULAR_USER_00/Zile/Backups/
+ $MY_MKDIR -p /root/Zile/Backups/
+ $MY_MKDIR -p /home/$REGULAR_USER_00/Zile/Backups/
  cp $SETUP_FILES_DIR/.zile /root/
  cp $SETUP_FILES_DIR/.zile /home/$REGULAR_USER_00/
 else
@@ -81,8 +81,8 @@ fi
 
 ## Emacs setup
 if command -v emacs > /dev/null 2>&1; then
- /usr/bin/mkdir -p /root/Emacs/Backups/
- /usr/bin/mkdir -p /home/$REGULAR_USER_00/Emacs/Backups/
+ $MY_MKDIR -p /root/Emacs/Backups/
+ $MY_MKDIR -p /home/$REGULAR_USER_00/Emacs/Backups/
  cp $SETUP_FILES_DIR/.emacs /root/
  cp $SETUP_FILES_DIR/.emacs /home/$REGULAR_USER_00/
 else
