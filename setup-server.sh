@@ -95,13 +95,13 @@ $MY_CHMOD 0700 /home/REGULAR_USER_00
 
 
 ## Firewall scripts
-/usr/bin/mkdir -p /root/admin/security/
+$MY_MKDIR -p /root/admin/security/
 cp  $SETUP_FILES_DIR/firewall.rules.start /root/admin/security/firewall.rules.start
 cp  $SETUP_FILES_DIR/firewall.rules.stop  /root/admin/security/firewall.rules.stop
 
 
 ## Email Reboot Notification
-/usr/bin/mkdir -p /usr/local/etc/scripts/security/
+$MY_MKDIR -p /usr/local/etc/scripts/security/
 cp $SETUP_FILES_DIR/reboot-email.sh /usr/local/etc/scripts/security/
 /usr/bin/chmod +x /usr/local/etc/scripts/security/reboot-email.sh
 
