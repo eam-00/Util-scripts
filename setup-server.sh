@@ -16,7 +16,6 @@ MY_CHOWN='/usr/bin/chown'
 MY_CHMOD='/usr/bin/chmod'
 MY_MKDIR='/usr/bin/mkdir'
 
-
 ## Without trailing slash [!!!!!]
 SETUP_FILES_DIR='/tmp/setup'
 
@@ -106,10 +105,10 @@ cp $SETUP_FILES_DIR/reboot-email.sh /usr/local/etc/scripts/security/
 /usr/bin/chmod +x /usr/local/etc/scripts/security/reboot-email.sh
 
 
-## Disk Usage for Monit
-/usr/bin/mkdir -p /usr/local/etc/scripts/utils/
+## Disk Usage script for Monit
+$MY_MKDIR -p /usr/local/etc/scripts/utils/
 cp $SETUP_FILES_DIR/check-disk-usage.sh /usr/local/etc/scripts/utils/
-/usr/bin/chmod +x /usr/local/etc/scripts/utils/check-disk-usage.sh
+$MY_CHMOD +x /usr/local/etc/scripts/utils/check-disk-usage.sh
 
 
 ## Logrotate
@@ -147,14 +146,14 @@ if [ -f "/var/spool/cron/root" ]; then
  cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/root 
 fi
 
-chown root:root /var/spool/cron/root
+$MY_CHOWN root:root /var/spool/cron/root
 
 ## Crontabs - Debian
 if [ -d "/var/spool/cron/crontabs/" ]; then
  cp $SETUP_FILES_DIR/root.crontab /var/spool/cron/crontabs/root 
 fi
 
-chown root:crontab /var/spool/cron/crontabs/root
+$MY_CHOWN root:crontab /var/spool/cron/crontabs/root
 
 ## cp /etc/apt/apt.conf.d/10periodic /etc/apt/apt.conf.d/_ORIG.10periodic.ORIG
 ## cp /etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/5_ORIG.0unattended-upgrades.ORIG
