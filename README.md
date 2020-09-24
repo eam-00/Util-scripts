@@ -4,7 +4,7 @@ _A couple of miscelaneous and utilitarian Linux server scripts._
 
 ## get-sysinfo.sh
 
-Get all sorts of information on a Linux box and save that info onto a log file.
+Get all sorts of information on a Linux box (Linux, kernel, CPU, RAM, Network, etc, etc.) and save that info onto a log file.
 
 **reboot-email.sh**
 
