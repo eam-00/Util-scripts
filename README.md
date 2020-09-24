@@ -2,7 +2,7 @@
 
 _A couple of miscelaneous and utilitarian Linux server scripts._
 
-**get-sysinfo.sh**
+## get-sysinfo.sh
 
 Get all sorts of information on a Linux box and save that info onto a log file.
 
