@@ -14,3 +14,4 @@ echo "<txt><span weight=\"bold\">" " |  " $(cat /proc/loadavg | awk '{print $
 echo "<tool>""</tool>"
 
 ## EoF ##
+
