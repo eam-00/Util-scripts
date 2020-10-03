@@ -2,6 +2,7 @@
 
 ## genMon-load.sh
 ## Prints the first value of the CPU load average, also a FontAwesome icon right before the load info
+## Genmon plugin configuration: Period (s): 28,50
 
 ## echo "<txt>" " |  " $(cat /proc/loadavg | awk '{print $1}') "</txt>"
 
