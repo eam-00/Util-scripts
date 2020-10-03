@@ -2,6 +2,7 @@
 ## genMon-date.sh
 ## Prints the date, using a specific format: "Tuesday 17 Sep 2019",
 ## also when clicked, it pops a calendar with the current month displayed.
+## Genmon plugin configuration: Period (s): 30,00
 
 ## Adapta color of sorts:
 ## echo "<txt><span weight=\"bold\" fgcolor=\"#11eded\">" "|  "  $(date +"%A %d %b %Y")"</span></txt>"
