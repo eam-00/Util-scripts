@@ -9,7 +9,9 @@ case "$(pgrep $PROC | wc -w)" in
 0)  echo "Warning: $PROC is not running"
     exit 1
     ;;
-1)  echo "SSHD is already up and running"
+1)  echo "Great: $PROC is running Ok"
     exit 0
     ;;
 esac
+
+## EoF ##
