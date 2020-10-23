@@ -6,8 +6,7 @@ PROC='sshd'
 
 case "$(pgrep $PROC | wc -w)" in
 
-0)  echo "Restarting SSHD:"
-    sudo /etc/init.d/sshd start
+0)  echo "Warning: $PROC is not running"
     exit 1
     ;;
 1)  echo "SSHD is already up and running"
