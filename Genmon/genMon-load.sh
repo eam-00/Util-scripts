@@ -5,7 +5,9 @@
 ## Genmon plugin configuration: Period (s): 28,50
 
 LOAD=$(cat /proc/loadavg | awk '{print $1}')
-if [ $LOAD \> 1.10 ]
+LOAD_TRIGGER="1.30"
+
+if [ $LOAD \> $LOAD_TRIGGER ]
 then
 ## Adapta fgcolor color and bold font
     echo "<txt><span weight=\"bold\" fgcolor=\"#11eded\">" " |  " $LOAD "</span></txt>"
