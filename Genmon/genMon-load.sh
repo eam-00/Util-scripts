@@ -2,6 +2,7 @@
 
 ## genMon-load.sh
 ## Prints the first value of the CPU load average, also a FontAwesome icon right before the load info
+## If the load goes above $LOAD_TRIGGER, changes the color of the font.
 ## Genmon plugin configuration: Period (s): 28,50
 
 LOAD=$(cat /proc/loadavg | awk '{print $1}')
