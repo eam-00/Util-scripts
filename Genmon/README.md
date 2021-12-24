@@ -1,7 +1,8 @@
 # Genmon Scripts
 
 A couple of Bash scripts I use to add information onto the XFCE Panel, using the [Genmon Plugin](https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin).  
-The idea is to have that information available and visible all the time, no need to press a keyboard combo, nor open a window, type any key nor minimize any window to be able to see the information provided by these scripts thru Genmon.
+The idea is to have that information available and visible all the time, no need to press a keyboard combo, nor open a window, type any key nor minimize any window to be able to see the information provided by these scripts thru Genmon.  
+Most of the scripts use the icons provided by [FontAwesome](https://fontawesome.com/). 
 
 
 ## genMon-time.sh ![genMon-time.sh on the XFCE Panel](Pics/genMon-time.sh.png)
