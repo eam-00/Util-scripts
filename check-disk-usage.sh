@@ -16,7 +16,7 @@ if [ $($MY_DF $DISK | $MY_TAIL | $MY_AWK '{print $1}' | $MY_TR) -gt $PERCENTAGE 
  echo "Root Partition: Check Available Disk Space"
  exit 1
 else
- echo "Root Partition: Available Disk Space Is Normal"
+ echo "Root Partition: Available Disk Space Is OK"
  exit 0
 fi
 
