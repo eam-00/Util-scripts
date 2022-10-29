@@ -12,8 +12,8 @@ REGULAR_USER_01=''
 
 MY_APT=$(which apt-get)
 MY_USERADD=$(which useradd)
-MY_CHOWN='/usr/bin/chown'
-MY_CHMOD='/usr/bin/chmod'
+MY_CHOWN=$(which chown)
+MY_CHMOD=$(which chmod)
 MY_MKDIR='/usr/bin/mkdir'
 
 ## Without trailing slash [!!!!!]
