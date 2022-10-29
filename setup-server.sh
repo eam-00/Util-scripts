@@ -11,7 +11,7 @@ REGULAR_USER_00=''
 REGULAR_USER_01=''
 
 MY_APT=$(which apt-get)
-MY_USERADD='/usr/sbin/useradd'
+MY_USERADD=$(which useradd)
 MY_CHOWN='/usr/bin/chown'
 MY_CHMOD='/usr/bin/chmod'
 MY_MKDIR='/usr/bin/mkdir'
