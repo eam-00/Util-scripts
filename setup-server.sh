@@ -14,7 +14,7 @@ MY_APT=$(which apt-get)
 MY_USERADD=$(which useradd)
 MY_CHOWN=$(which chown)
 MY_CHMOD=$(which chmod)
-MY_MKDIR='/usr/bin/mkdir'
+MY_MKDIR=$(which mkdir)
 
 ## Without trailing slash [!!!!!]
 SETUP_FILES_DIR='/tmp/setup'
