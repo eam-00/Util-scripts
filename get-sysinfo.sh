@@ -7,7 +7,7 @@
 HOSTNAME=$(which hostname)
 MY_ECHO=$(which echo)" -e"
 SEPARATOR="`which echo` ----------------------"
-MY_CAT=`which cat`
+MY_CAT=$(which cat)
 MY_UNAME=`which uname`
 MY_FREE=`which free`
 MY_DF=`which df`
