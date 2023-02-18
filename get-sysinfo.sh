@@ -5,7 +5,7 @@
 ## and saves that info onto a log file.
 
 HOSTNAME=$(which hostname)
-MY_ECHO="`which echo` -e"
+MY_ECHO=$(which echo)" -e"
 SEPARATOR="`which echo` ----------------------"
 MY_CAT=`which cat`
 MY_UNAME=`which uname`
