@@ -6,7 +6,7 @@
 
 DATE=$(which date)
 LOG='/tmp/check-updates.log'
-APT_GET='/usr/bin/apt-get'
+APT_GET=$(which apt-get)
 APT_GET_OPT_1='update'
 APT_GET_OPT_2='--download-only --assume-no dist-upgrade'
 DEST='xxxxxxxxxxxxxxxx@xxxxxxxxxxxxxxxx.com'
