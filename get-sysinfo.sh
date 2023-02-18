@@ -4,7 +4,7 @@
 ## Gathers information on a Linux box (Debian/ Ubuntu and Rackspace centric)
 ## and saves that info onto a log file.
 
-HOSTNAME=`which hostname`
+HOSTNAME=$(which hostname)
 MY_ECHO="`which echo` -e"
 SEPARATOR="`which echo` ----------------------"
 MY_CAT=`which cat`
