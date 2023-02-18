@@ -10,7 +10,7 @@ APT_GET='/usr/bin/apt-get'
 APT_GET_OPT_1='update'
 APT_GET_OPT_2='--download-only --assume-no dist-upgrade'
 DEST='xxxxxxxxxxxxxxxx@xxxxxxxxxxxxxxxx.com'
-CAT='/bin/cat'
+CAT=$(which cat)
 MAIL='/usr/bin/mail'
 HOST=`/bin/hostname`
 
