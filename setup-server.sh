@@ -20,6 +20,9 @@ MY_MKDIR=$(which mkdir)
 SETUP_FILES_DIR='/tmp/setup'
 
 ## Install programs
+echo
+echo "Install programs ..."
+echo
 $MY_APT install logwatch zile monit mailutils rsnapshot
 
 ## Create User & Home Dirs
