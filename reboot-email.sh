@@ -7,7 +7,7 @@
 ## Multiple destinataries has to be separated by a space
 DEST='xxxxxxx@xxxxxxx.net xxxxx@xxxx.com'
 HOSTNAME=$(which hostname)
-MAIL=`which mail`
+MAIL=$(which mail)
 CAT=`which cat`
 MY_MSG='/tmp/server-reboot.msg'
 MY_ECHO='/bin/echo -e'
