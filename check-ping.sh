@@ -2,7 +2,6 @@
 
 hosts="${1}"
 cmd_ping=$(which ping)
-cmd_nslookup=$(which nslookup)
 
 
 # Clear the screen
