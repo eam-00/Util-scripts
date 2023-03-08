@@ -11,7 +11,7 @@ MAIL=`which mail`
 CAT=`which cat`
 MY_MSG='/tmp/server-reboot.msg'
 MY_ECHO='/bin/echo -e'
-MY_DATE=`/bin/date`
+MY_DATE=$(which date)
 DELETE='/usr/bin/rm -f'
 
 $MY_ECHO "ALERT $HOSTNAME rebooted" > $MY_MSG
