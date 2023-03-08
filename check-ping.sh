@@ -34,12 +34,7 @@ for host in ${hosts}; do
                 echo "Status for ${host}: UP" 
 
 
-##                ip_nslookup=$(${cmd_nslookup} ${host} | grep -i address: | tail -1 | awk '{print $2}')
-##                if [ ! -z ${ip_nslookup} ]; then
-##                        echo "IP Address for ${host}: ${ip_nslookup}"
-##                else
-##                        echo "IP Address for ${host}: DNS not resolving"
-##                fi
+
         else
                 echo "$host: DOWN"
         fi
