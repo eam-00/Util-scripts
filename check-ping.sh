@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# This is intended for hosts availability checking. 
-
-# Variables
 hosts="${1}"
 cmd_ping=$(which ping)
 cmd_nslookup=$(which nslookup)
