@@ -3,8 +3,6 @@
 hosts="${1}"
 cmd_ping=$(which ping)
 
-
-# Clear the screen
 clear
 
 
