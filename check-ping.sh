@@ -16,7 +16,7 @@ if [ -z "${1}" ]; then
         echo "Usage:"
         echo -e "\t$0 \"hostname1\""
         echo -e "\t\tor "
-        echo -e "\t$0 \"hostname1 hostname2 hostname2 ...\""
+        echo -e "\t$0 \"hostname1\" \"hostname2\" \"hostname3\" ...\""
         echo
         exit
 fi
