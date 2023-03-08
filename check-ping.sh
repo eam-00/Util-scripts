@@ -20,7 +20,6 @@ if [ -z "${1}" ]; then
 fi
 
 
-# Print one dividing line.
 echo "----------------------------"
 
 
