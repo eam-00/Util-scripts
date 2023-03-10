@@ -6,7 +6,7 @@ cmd_ping=$(which ping)
 clear
 
 
-# Check if the ARG is present
+
 if [ -z "${1}" ]; then
         echo
         echo -e "You must provide the host/s [ARG1]"
