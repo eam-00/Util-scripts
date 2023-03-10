@@ -20,8 +20,6 @@ fi
 
 echo "----------------------------"
 
-
-
 for host in ${hosts}; do
         
         $cmd_ping -c10 $host &>/dev/null
