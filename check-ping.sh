@@ -25,7 +25,7 @@ echo "----------------------------"
 
 # Main
 for host in ${hosts}; do
-        # Ping the hosts
+        
         $cmd_ping -c10 $host &>/dev/null
         if [ $? -eq 0 ]; then
                 echo "Status for ${host}: UP" 
