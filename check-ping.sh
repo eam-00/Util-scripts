@@ -26,8 +26,6 @@ for host in ${hosts}; do
         if [ $? -eq 0 ]; then
                 echo "Status for ${host}: UP" 
 
-
-
         else
                 echo "$host: DOWN"
         fi
