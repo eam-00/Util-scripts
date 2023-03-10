@@ -17,7 +17,6 @@ if [ -z "${1}" ]; then
         exit
 fi
 
-
 echo "----------------------------"
 
 for host in ${hosts}; do
