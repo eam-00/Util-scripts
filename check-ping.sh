@@ -28,7 +28,9 @@ for host in ${hosts}; do
         else
                 echo "$host: DOWN"
         fi
-        echo "----------------------------"
+        
+echo "----------------------------"
+
 done
 
 ## EOF ##
