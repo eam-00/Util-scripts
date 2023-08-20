@@ -3,7 +3,7 @@
 ## check-disk-usage.sh
 ## Checks a disk or partition and if the usage goes above the
 ## PERCENTAGE it prints a warning.
-## Used to make checks via Monit 
+## Used to make checks via [Monit](https://github.com/eam-00/Monit/tree/master) 
 
 DISK='/dev/mapper/t60p--vg-root'
 PERCENTAGE='56'
