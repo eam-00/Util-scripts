@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## A plain & simple script to check if a given process is running or not.
-## To be used via Monit in order to monitor a process that does not write a PID
+## To be used via Monit in order to monitor (https://github.com/eam-00/Monit) a process that does not write a PID
 
 ## echo `pgrep sshd | tr '\n' ' '` > /tmp/sshd.pid
 ## case "$(pidof sshd | wc -w)" in
