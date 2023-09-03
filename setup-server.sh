@@ -53,7 +53,7 @@ if [ -f "/root/.bashrc" ]; then
 fi
  cp $SETUP_FILES_DIR/.bashrc  /root/.bashrc
 
-if [ -f "/$REGULAR_USER_00/.bashrc" ]; then
+if [ -f "/home/$REGULAR_USER_00/.bashrc" ]; then
  cp /home/$REGULAR_USER_00/.bashrc /home/$REGULAR_USER_00/.bashrc.ORIG
 fi    
  cp $SETUP_FILES_DIR/.bashrc  /home/$REGULAR_USER_00/.bashrc
