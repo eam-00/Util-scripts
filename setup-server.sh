@@ -92,8 +92,8 @@ else
 fi
 
 ## After Zile and/ or Emacs, .bashrc and .profile setup, set correct owner and permissions
-$MY_CHOWN -R REGULAR_USER_00:$REGULAR_USER_00 /home/REGULAR_USER_00/
-$MY_CHMOD 0700 /home/REGULAR_USER_00
+$MY_CHOWN -R $REGULAR_USER_00:$REGULAR_USER_00 /home/REGULAR_USER_00/
+$MY_CHMOD 0700 /home/$REGULAR_USER_00
 
 
 ## Firewall scripts
