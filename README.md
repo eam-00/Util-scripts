@@ -21,3 +21,7 @@ This one sets things up on a server, makes a copy of the original files and then
 ## check-disk-usage.sh
 Checks a disk or partition and if the usage goes above the PERCENTAGE it prints a warning.  
 I use this script executed via [Monit](https://mmonit.com/monit/) to get email warnings when the available drive space reaches the specified threshold.
+
+## check-proc.sh
+Checks if a process is running or not.  
+Useful with Monit if the monitored process doesn't write a PID.
