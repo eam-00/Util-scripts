@@ -8,7 +8,7 @@ Get all sorts of information on a Linux box (Linux, kernel, CPU, RAM, Network, e
 
 ## reboot-email.sh
 
-Send an email when the server is rebooted.
+Send an email notification when the server is rebooted.
 
 ## check-updates.sh
 
