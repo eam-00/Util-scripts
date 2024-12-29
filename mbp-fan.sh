@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if [ "$EUID" -ne 0 ]
+  then
+       echo "This script needs to be executed as root or via sudo."
+       echo "Exiting"
+  exit
+fi
+
 echo -e "Current fan speed:"
 echo
 cat /sys/devices/platform/applesmc.768/fan1_min
