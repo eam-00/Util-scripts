@@ -12,12 +12,39 @@ MY_DATE=$(which date)
 MY_HWCLOCK=$(which hwclock)
 
 read -p "Enter Month: " MONTH
-read -p "Enter Day: " DAY
-read -p "Enter Hour: " HOUR
-read -p "Enter Minutes: " MINUTES
-read -p "Enter Year: " YEAR
+if [ -z "$MONTH" ]
+then 
+    echo "The Month cannot be blank."
+    echo "Exiting"    
+    exit 0 
+fi
 
-if [ -z "$MONTH" ] || [ -z "$DAY" ] || [ -z "$HOUR" ] || [ -z "$MINUTES" ] || [ -z "$YEAR" ]
+read -p "Enter Day: " DAY
+if [ -z "$DAY" ] 
+then 
+    echo "The input cannot be blank."
+    echo "Exiting"    
+    exit 0 
+fi
+
+read -p "Enter Hour: " HOUR
+if [ -z "$HOUR" ]
+then 
+    echo "The input cannot be blank."
+    echo "Exiting"    
+    exit 0 
+fi
+
+read -p "Enter Minutes: " MINUTES
+if [ -z "$MINUTES" ]
+then 
+    echo "The input cannot be blank."
+    echo "Exiting"    
+    exit 0 
+fi
+
+read -p "Enter Year: " YEAR
+if [ -z "$YEAR" ]
 then 
     echo "The input cannot be blank."
     echo "Exiting"    
