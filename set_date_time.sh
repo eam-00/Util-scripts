@@ -17,6 +17,13 @@ read -p "Enter Hour: " HOUR
 read -p "Enter Minutes: " MINUTES
 read -p "Enter Year: " YEAR
 
+if [ -z "$MONTH" ] || [ -z "$DAY" ] || [ -z "$HOUR" ] || [ -z "$MINUTES" ] || [ -z "$YEAR" ]
+then 
+    echo "The input cannot be blank."
+    echo "Exiting"    
+    exit 0 
+fi
+
 $MY_DATE $MONTH$DAY$HOUR$MINUTES$YEAR && $MY_HWCLOCK -w
 
 # EOF #
