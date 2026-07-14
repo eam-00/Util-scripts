@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## genMon-bsas-weather.sh
-## Prints the weather in Bs As, taken from wttr.in, via cronjob, stored on $LOG
+## Prints the weather in Buenos Aires, Argentina, taken from wttr.in, via cronjob, stored on $LOG
 ## This script uses the output from the execution of the script:
 ## ~/Local/Scripts/genmon/get-bsas-weather.sh
 
