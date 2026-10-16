@@ -4,7 +4,7 @@ A couple of Bash scripts I use to add information onto the XFCE Panel, using the
 The idea is to have that information available and visible all the time, no need to press a keyboard combo, nor open a window, type any key nor minimize any window to be able to see the information provided by these scripts thru Genmon.  
 Most of the scripts use the icons provided by [FontAwesome](https://fontawesome.com/). 
 
-## (get-caba-temperature.sh)[https://github.com/eam-00/Util-scripts/blob/master/Genmon/get-caba-temperature.sh] ![get-caba-temperature.sh on the XFCE Panel](Pics/get-caba-temperature.sh.png)
+## [get-caba-temperature.sh|[https://github.com/eam-00/Util-scripts/blob/master/Genmon/get-caba-temperature.sh]![get-caba-temperature.sh on the XFCE Panel](Pics/get-caba-temperature.sh.png)
 
 Prints the temperature from Ciudad Autonoma de Buenos Aires.  
 Scrapes the information from the Servicio Meteorologico Nacional Twitter page.  
