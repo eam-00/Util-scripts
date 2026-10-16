@@ -6,6 +6,9 @@ Most of the scripts use the icons provided by [FontAwesome](https://fontawesome.
 
 ## get-caba-temperature.sh ![get-caba-temperature.sh on the XFCE Panel](Pics/get-caba-temperature.sh.png)
 
+Prints the temperature from Ciudad Autonoma de Buenos Aires.  
+Scrapes the information from the Servicio Meteorologico Nacional Twitter page.  
+This script is intended for OpenBSD.
 
 
 ## genMon-time.sh ![genMon-time.sh on the XFCE Panel](Pics/genMon-time.sh.png)
