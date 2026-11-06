@@ -32,7 +32,6 @@ Prints the date on a specific format, also when clicked, it pops a calendar with
 ## genMon-bsas-weather.sh ![genMon-bsas-weather.sh on the XFCE Panel](Pics/genMon-bsas-weather.sh.png)
 ![Another screenshot](Pics/genMon-bsas-weather-short.sh.jpg)
 
-
 ## genMon-cpu-temp.sh
 
 Prints the temperature of the CPU.
