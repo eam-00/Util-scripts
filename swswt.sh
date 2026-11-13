@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## Switch Workspace Switch Window Theme (on XFCE)
+## XFCE: Switch Your Workspace And Also Switch The Window Manager Theme
 
 cmd_wmctrl=$(which wmctrl)
 MY_THEME='Numix-compact'
